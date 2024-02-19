@@ -1,20 +1,18 @@
 <template>
   <Hater/>
   <body>
-    <div class="container">
-      <inst/>
-    </div>
+      <RouterView></RouterView>
   </body>
 </template>
 
 <script>
-import Hater from './components/Hat_All.vue'
-import inst from './views/InstituteView.vue'
+import Hater from './components/hatAll.vue'
+
 export default {
   name: 'App',
   components: {
     Hater,
-    inst
+
   }
 }
 </script>
