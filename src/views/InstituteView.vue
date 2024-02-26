@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm p-3 min-vh-100">
-                        <institute_Test />
+                        <IntitituteTest />
                     </div>
                 </div>
             </div>
@@ -12,5 +12,5 @@
     </div>
 </template>
 <script setup>
-import institute_Test from '@/components/instituteTest.vue';
+import IntitituteTest from '@/components/InstituteTest.vue';
 </script>
