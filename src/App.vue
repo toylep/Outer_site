@@ -1,20 +1,14 @@
 <template>
-  <Hater/>
+  <HatAll/>
   <body>
       <RouterView></RouterView>
   </body>
 </template>
 
-<script>
-import Hater from './components/hatAll.vue'
+<script setup>
+import HatAll from './components/HatAll.vue'
 
-export default {
-  name: 'App',
-  components: {
-    Hater,
 
-  }
-}
 </script>
 
 <style>

@@ -1,0 +1,43 @@
+<template>
+    <div>
+        <div v-for="inst in instStorage.Insts">
+            <button href="#" class="button" @click="()=>{practiceStorage.setInstId(inst.id),practiceStorage.getPracticeFromServer()}">
+                <router-link :to="{ name: 'partner' }">
+                    <div class="Institutes" :style="{ BackgroundImage: inst.image }">
+                        <div class="textInst">
+                            <div style="margin-left: 10px; margin-bottom: 15px;">{{ inst.name }}</div>
+
+                            <div class="specText"><strong>Специальности:</strong>
+                                 {{instStorage.Insts[0].specialities.map((el)=>el.name).join(" ")}}
+                            </div>
+
+                            <div class="specText"><strong>Должности:</strong>{{ inst.works }}</div>
+
+                        </div>
+                    </div>
+                </router-link>
+            </button>
+        </div>
+    </div>
+</template>
+<script setup>
+import { ref } from 'vue';
+import { useInstStorage } from '@/storages/InstStorage'
+import { onBeforeMount,onMounted } from 'vue';
+import axios from 'axios';
+import { usePracticeStorage } from '@/storages/PracticeStorage';
+const instStorage = ref(useInstStorage())
+const practiceStorage = ref(usePracticeStorage())
+const instHolder = {
+    image: '',
+    name: '',
+    specs: '',
+    works: '',
+    agreement: '',
+}
+
+onMounted(() => {
+    instStorage.value.getInstsFromServer()
+   
+})
+</script>
