@@ -26,7 +26,7 @@ body {
 .Header {
     padding: 8px;
     width: 100%;
-    font-size: 22px;
+
     background-color: #ffffff;
     border-color: transparent;
     border-style: solid;
@@ -37,15 +37,28 @@ body {
 
 
 }
+.HeaderInPartner{
+    padding: 8px;
+    width: 100%;
+
+    background-color: blueviolet;
+    border-color: transparent;
+    border-style: solid;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+
+
+}
 .name {
     font-family: 'TildaSans', Arial, sans-serif;
-
+    font-weight: bold;
+    font-size: 115%;
     float: left;
 }
 
-.searcher {
-    text-align: center;
-}
+
 
 .Institutes {
     border-radius: 35px;
@@ -56,7 +69,7 @@ body {
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-
+    
     background-position: left;
     border-color: transparent;
     margin-bottom: 25px;
@@ -80,6 +93,7 @@ body {
     box-sizing: border-box;
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
+    color: black;
 
 }
 
@@ -117,6 +131,6 @@ body {
     cursor: pointer;
 }
 .button{
-    background-color: rgb(245, 245, 245);
+    background-color:white;
     border-style: hidden;
 }
