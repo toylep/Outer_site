@@ -15,6 +15,7 @@ export const usePracticeStorage = defineStore('practiceStore',{
             })
             .then((response) => {this.practices = response.data})
             .catch(err=>{this.practices = []})
+            console.log(this.practices)
         },
         async setInstId(id){
             this.inst_id = id

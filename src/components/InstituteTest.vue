@@ -38,6 +38,7 @@ const instHolder = {
 
 onMounted(() => {
     instStorage.value.getInstsFromServer()
+    console.log(instStorage.value.getInstsFromServer())
    
 })
 </script>

@@ -47,5 +47,6 @@ const partnerHolder = {
 
 onBeforeMount(() => {
     practiceStorage.value.getPracticeFromServer()
+    console.log(practiceStorage.value.getPracticeFromServer())
 })
 </script>

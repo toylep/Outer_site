@@ -10,6 +10,7 @@ export const useInstStorage = defineStore("instituteStore", {
       axios.get("/api/out/faculty/")
       .then((response) => {
           this.Insts = response.data;
+          console.log(this.Insts);
         });
     },
   }
