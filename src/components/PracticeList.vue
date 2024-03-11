@@ -11,7 +11,7 @@
                 <img :src="practice.company.image" class="card-img-top" alt="тут должна быть картинка"
                     style="width: 15rem;">
                 <div class="card-body">
-                    <p class="card-text">{{ practice.company.agreement }}</p>
+                    <p class="card-text">{{ practice.company.agreements }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" v-for="link in practice.doc_links">
