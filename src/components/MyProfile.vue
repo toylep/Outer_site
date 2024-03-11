@@ -1,6 +1,7 @@
 <template>
-    <h1>Профиль</h1>
+    
     <div class="card">
+        <h1>Профиль</h1>
         <div class="card-body">
             <h3 class="card-title">{{ userStorage.partner.image }}</h3>
             <hr>
