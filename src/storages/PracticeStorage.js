@@ -8,7 +8,7 @@ export const usePracticeStorage = defineStore('practiceStore',{
     }),
     actions:{
         async getPracticeFromServer(){
-            axios.get('api/partners/practice',{
+            axios.get('api/out/practice',{
                 params: {
                     institute: this.inst_id
                 }

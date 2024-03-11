@@ -32,7 +32,7 @@
 import { ref } from 'vue';
 import { usePracticeStorage } from '@/storages/PracticeStorage'
 import { onBeforeMount } from 'vue';
-import axios from 'axios';
+
 
 const practiceStorage = ref(usePracticeStorage())
 const partnerHolder = {
@@ -46,6 +46,6 @@ const partnerHolder = {
 
 
 onBeforeMount(() => {
-    // practiceStorage.value.getPracticeFromServer()
+    practiceStorage.value.getPracticeFromServer()
 })
 </script>

@@ -8,10 +8,10 @@
                             <div style="margin-left: 10px; margin-bottom: 15px;">{{ inst.name }}</div>
 
                             <div class="specText"><strong>Специальности:</strong>
-                                 {{instStorage.Insts[0].specialities.map((el)=>el.name).join(" ")}}
+                                 {{inst.specialities.join(', ')}}
                             </div>
 
-                            <div class="specText"><strong>Должности:</strong>{{ inst.works }}</div>
+                            <!-- <div class="specText"><strong>Должности:</strong>{{ inst.works }}</div> -->
 
                         </div>
                     </div>
@@ -24,7 +24,7 @@
 import { ref } from 'vue';
 import { useInstStorage } from '@/storages/InstStorage'
 import { onBeforeMount,onMounted } from 'vue';
-import axios from 'axios';
+
 import { usePracticeStorage } from '@/storages/PracticeStorage';
 const instStorage = ref(useInstStorage())
 const practiceStorage = ref(usePracticeStorage())

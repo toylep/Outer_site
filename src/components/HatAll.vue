@@ -27,7 +27,7 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
-import LoginWindow from './Loginwindow.vue';
+import LoginWindow from './LoginWindow.vue';
 import { useUserStorage } from '@/storages/UserStorage';
 import { ref, onBeforeMount } from 'vue';
 const userStorage = ref(useUserStorage())
