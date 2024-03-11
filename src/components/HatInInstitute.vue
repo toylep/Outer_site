@@ -1,7 +1,7 @@
 <template>
     <div class="card" :style="{ backgroundImage: 'url(' + HatImg + ')' }">
         <div class="card-body">
-            <h2 style="width: fit-content; background-color: skyblue; border-radius: 3px;color: ;">
+            <h2 style="width: fit-content; background-color: skyblue; border-radius: 3px;">
                 Промышленные партнеры
             </h2>
 
