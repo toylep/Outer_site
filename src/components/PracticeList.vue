@@ -6,12 +6,12 @@
         <div v-for="practice in  practiceStorage.practices">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">{{ practice.partner.name }}</h5>
+                    <h5 class="card-title">{{ practice.company.name }}</h5>
                 </div>
-                <img :src="practice.partner.image" class="card-img-top" alt="тут должна быть картинка"
+                <img :src="practice.company.image" class="card-img-top" alt="тут должна быть картинка"
                     style="width: 15rem;">
                 <div class="card-body">
-                    <p class="card-text">{{ practice.partner.agreement }}</p>
+                    <p class="card-text">{{ practice.company.agreement }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" v-for="link in practice.doc_links">
