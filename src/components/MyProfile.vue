@@ -11,10 +11,10 @@
             <h3 class="card-title">Темы заданий на практику: {{ userStorage.partner.practice_topics }}</h3>
             <hr>
             <hr>
-            <h3 class="card-title">Сфера деятельности: {{ userStorage.partner }}</h3>
+            <h3 class="card-title">Сфера деятельности: {{  }}</h3>
             <hr>
             <hr>
-            <h3 class="card-title">Контактное лицо: {{ userStorage.partner }}</h3>
+            <h3 class="card-title">Контактное лицо: {{  }}</h3>
             <hr>
         </div>
     </div>
