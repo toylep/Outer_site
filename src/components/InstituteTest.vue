@@ -36,7 +36,8 @@ const instHolder = {
     agreement: '',
 }
 
-onMounted(() => {
+onBeforeMount(() => {
+    console.log("получаем институты")
     instStorage.value.getInstsFromServer()
     console.log(instStorage.value.getInstsFromServer())
    

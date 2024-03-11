@@ -8,6 +8,7 @@ export const usePracticeStorage = defineStore('practiceStore',{
     }),
     actions:{
         async getPracticeFromServer(){
+            console.log("получаем практики")
             axios.get('api/out/practice',{
                 params: {
                     institute: this.inst_id
@@ -15,7 +16,7 @@ export const usePracticeStorage = defineStore('practiceStore',{
             })
             .then((response) => {this.practices = response.data})
             .catch(err=>{this.practices = []})
-            console.log(this.practices)
+            
         },
         async setInstId(id){
             this.inst_id = id
