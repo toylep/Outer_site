@@ -1,13 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 import InstituteView from '@/views/InstituteView.vue';
 import PracticeView from '@/views/PracticeView.vue';
 const routes = [
   { 
     
     path: '/',
-    name: 'home',
+    name: '',
     component: InstituteView
-  },{
+  },
+  {
     path: '/partner',
     name: 'partner',
     component: PracticeView

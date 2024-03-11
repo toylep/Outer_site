@@ -10,4 +10,7 @@ import router from './router'
  import 'bootstrap-icons/font/bootstrap-icons.css'
  import "bootstrap"
 
-createApp(App).use(router).use(createPinia()).mount('#app')
+createApp(App)
+    .use(router)
+    .use(createPinia())
+    .mount('#app')
