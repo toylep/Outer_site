@@ -1,6 +1,6 @@
 <template>
     
-    <div class="card">
+    <div class="card" style="text-align: center;">
         <h1 style="text-align: center;">Профиль</h1>
         <div class="card-body">
             <h3 class="card-title">{{ userStorage.partner.image }}</h3>
