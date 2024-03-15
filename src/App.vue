@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import HatAll from './components/HatAll.vue'
+import HatAll from './components/Hat.vue'
 
 
 </script>
