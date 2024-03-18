@@ -6,12 +6,15 @@
         <div v-for="practice in  practiceStorage.practices">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">{{ practice.company.fullname }}</h5>
+                    <h5 class="card-title">{{ practice.company.name }}</h5>
                 </div>
                 <img :src="practice.company.image" class="card-img-top" alt="тут должна быть картинка"
                     style="width: 15rem;">
                 <div class="card-body">
                     <p class="card-text">{{ practice.company.agreements }}</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ practice.name }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" v-for="link in practice.doc_links">
@@ -35,15 +38,15 @@ import { onBeforeMount } from 'vue';
 
 
 const practiceStorage = ref(usePracticeStorage())
-const partnerHolder = {
-    image: '',
-    fullname: '',
-    name: '',
-    link: '',
-    description: '',
-    agreement: '',
+// const partnerHolder = {
+//     image: '',
+//     fullname: '',
+//     name: '',
+//     link: '',
+//     description: '',
+//     agreement: '',
 
-}
+// }
 
 
 onBeforeMount(() => {

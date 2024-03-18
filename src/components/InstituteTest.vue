@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="card list flex">
         <div v-for="inst in instStorage.Insts">
             <button href="#" class="button" @click="()=>{practiceStorage.setInstId(inst.id),practiceStorage.getPracticeFromServer()}">
                 <router-link :to="{ name: 'partner' }">
