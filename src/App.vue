@@ -1,6 +1,7 @@
 <template>
   <HatAll/>
   <body>
+    
       <RouterView></RouterView>
   </body>
 </template>
