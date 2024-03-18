@@ -6,7 +6,7 @@
         <div v-for="practice in  practiceStorage.practices">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">{{ practice.company.name }}</h5>
+                    <h5 class="card-title">{{ practice.company.fullname }}</h5>
                 </div>
                 <img :src="practice.company.image" class="card-img-top" alt="тут должна быть картинка"
                     style="width: 15rem;">
@@ -37,6 +37,7 @@ import { onBeforeMount } from 'vue';
 const practiceStorage = ref(usePracticeStorage())
 const partnerHolder = {
     image: '',
+    fullname: '',
     name: '',
     link: '',
     description: '',
