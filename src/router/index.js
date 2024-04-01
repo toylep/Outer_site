@@ -9,14 +9,13 @@ const routes = [
     name: 'home',
     component: InstituteView
   },{
-    path: '/partner',
+    path: '/out/partner',
     name: 'partner',
     component: PracticeView
   },
   {
-    path: '/user',
-    name: 'user',
-    component: UserView
+    path: '/bitrix',
+    name: 'bitrix'
   }
  
 ]

@@ -12,5 +12,5 @@
 
 </template>
 <script setup>
-import IntitituteTest from '@/components/InstituteTest.vue';
+import IntitituteTest from '@/components/Institute.vue';
 </script>
