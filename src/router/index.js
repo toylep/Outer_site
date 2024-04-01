@@ -14,8 +14,8 @@ const routes = [
     component: PracticeView
   },
   {
-    path: '/bitrix',
-    name: 'bitrix'
+    path: '/in',
+    name: 'in'
   }
  
 ]
