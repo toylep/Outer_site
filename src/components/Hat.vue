@@ -17,6 +17,7 @@
             <a href = "https://job.istu.edu/in"><button class="hat_butt"><img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRALBplMxySL51Y_dJZ5FTrLpa1rpD72FebJA&usqp=CAU"
                     style="height: 35px; width: 35px; margin-left: 7px;">
+                    
                 
             </button></a>
         </div>
@@ -48,9 +49,10 @@ const logout = () => {
     userStorage.value.setUser(user)
     userStorage.value.setAuth(auth)
 }
+
 onBeforeMount(() => {
     if (JSON.parse(localStorage.getItem('user')) == user) {
         userStorage.value.setUserFromServer()
     }
 })
-</script>@/storages/UserStorage./LoginWindow.vue
+</script>

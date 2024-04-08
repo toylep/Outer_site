@@ -1,5 +1,5 @@
 <template>
-    
+    <button type="button" class="btn btn-primary" @click="Tester">test</button>
         <a v-for="inst in instStorage.Insts" class = "block" >
             
                 <button href="#" class="button"  style = "margin-left: 35px;" 
@@ -38,7 +38,11 @@ const instHolder = {
     works: '',
     agreement: '',
 }
-
+function Tester(){
+    console.log("получаем институты")
+    instStorage.value.getInstsFromServer()
+    console.log(instStorage.value.getInstsFromServer())
+}
 onBeforeMount(() => {
     console.log("получаем институты")
     instStorage.value.getInstsFromServer()

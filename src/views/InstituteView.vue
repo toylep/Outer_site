@@ -1,8 +1,9 @@
 <template>
     
         <div>
+            
             <div class="container-fluid" style="text-align: center;">
-
+                
                 
                     <IntitituteTest />
                 
@@ -12,7 +13,10 @@
 
 </template>
 <script setup>
+import Institute from '@/components/Institute.vue';
 import IntitituteTest from '@/components/Institute.vue';
+
+
 onBeforeMount(() => {
     console.log("страничка грузится")
 
