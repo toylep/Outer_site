@@ -5,7 +5,7 @@ import UserView from '@/views/UserView'
 const routes = [
   { 
     
-    path: '/',
+    path: '/out',
     name: 'home',
     component: InstituteView
   },{
