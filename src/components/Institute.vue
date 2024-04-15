@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="btn btn-primary" @click="Tester">test</button>
+    
         <a v-for="inst in instStorage.Insts" class = "block" >
             
                 <button href="#" class="button"  style = "margin-left: 35px;" 
@@ -9,9 +9,9 @@
                             <div class="textInst">
                                 <div style="margin-left: 10px; margin-bottom: 15px;">{{ inst.name }}</div>
 
-                                <div class="specText"><strong>Специальности:</strong>
+                                <!-- <div class="specText"><strong>Специальности:</strong>
                                     {{ inst.specialities.join(', ') }}
-                                </div>
+                                </div> -->
 
                                 <!-- <div class="specText"><strong>Должности:</strong>{{ inst.works }}</div> -->
 
@@ -38,11 +38,7 @@ const instHolder = {
     works: '',
     agreement: '',
 }
-function Tester(){
-    console.log("получаем институты")
-    instStorage.value.getInstsFromServer()
-    console.log(instStorage.value.getInstsFromServer())
-}
+
 onBeforeMount(() => {
     console.log("получаем институты")
     instStorage.value.getInstsFromServer()
