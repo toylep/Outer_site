@@ -2,7 +2,28 @@ import axios from "axios";
 import { defineStore } from "pinia";
 export const useInstStorage = defineStore("instituteStore", {
   state: () => ({
-    Insts: [
+    Insts: [{
+      "id": 1,
+      "specialities": [
+      {
+      "name": "ИСТ",
+      "institute": 1
+      },
+      {
+      "name": "АСУ",
+      "institute": 1
+      },
+      {
+      "name": "ЭВМ",
+      "institute": 1
+      },
+      {
+      "name": "ИБ",
+      "institute": 1
+      }
+      ],
+      "name": "ИиТИАД"
+      }
       ]
 
   }),

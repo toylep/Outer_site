@@ -131,6 +131,6 @@ body {
     cursor: pointer;
 }
 .button{
-    background-color:white;
+    background-color:  rgb(245, 245, 245);
     border-style: hidden;
 }
