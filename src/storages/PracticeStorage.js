@@ -11,7 +11,7 @@ export const usePracticeStorage = defineStore('practiceStore',{
             console.log("получаем практики")
             axios.get("api/out/base/practice/",{
                 params: {
-                    institute: this.inst_id
+                    faculty: this.inst_id
                 }
             })
             .then((response) => {this.practices = response.data})
