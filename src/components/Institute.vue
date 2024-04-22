@@ -5,7 +5,7 @@
                 <button href="#" class="button"  style = "margin-left: 35px;" 
                     @click="() => { practiceStorage.setInstId(inst.id), practiceStorage.getPracticeFromServer() }">
                     <router-link :to="{ name: 'partner' }">
-                        <div class="Institutes" :style="{ BackgroundImage: inst.image }">
+                        <div class="Institutes" :style="{ backgroundImage: 'url(' + inst.image + ')' }" >
                             <div class="textInst">
                                 <div style="margin-left: 10px; margin-bottom: 15px;">{{ inst.name }}</div>
 
