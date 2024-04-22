@@ -71,7 +71,7 @@ body {
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    
+    background-size: contain;
     background-position: left;
     border-color: transparent;
     margin-bottom: 25px;
