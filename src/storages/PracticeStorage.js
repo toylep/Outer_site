@@ -5,6 +5,8 @@ export const usePracticeStorage = defineStore('practiceStore',{
     state: () =>({
         practices:[],
         inst_id: 0,
+        is_empty: false,
+        has_error: false
     }),
     actions:{
         async getPracticeFromServer(){
@@ -14,8 +16,13 @@ export const usePracticeStorage = defineStore('practiceStore',{
                     faculty: await this.getInstId()
                 }
             })
-            .then((response) => {this.practices = response.data})
-            .catch(err=>{this.practices = []})
+            .then((response) => {
+                this.practices = response.data
+                
+                if (this.practices.length == 0) this.is_empty = true
+                else this.is_empty = false
+            })
+            .catch(err=>{this.practices = [],this.has_error=true})
             
         },
         setInstId(id){
