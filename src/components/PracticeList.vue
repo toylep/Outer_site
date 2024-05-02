@@ -14,11 +14,13 @@
                 <img :src="practice.company.image" class="card-img-top" alt="тут должна быть картинка"
                     style="width: 15rem;">
                 <div class="card-body">
-                    <p class="card-text">{{ practice.company.agreements }}</p>
+                    <p class="card-text">Договор: {{ practice.company.agreements }}</p>
+                    <p class="card-text">Задачи:</p>
+                    <ul>
+                        <li class="card-text" v-for="theme in practice.themes">{{ theme.name }}</li>
+                    </ul>
                 </div>
-                <div class="card-body">
-                    <p class="card-text">{{ practice.name }}</p>
-                </div>
+                
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" v-for="link in practice.doc_links">
                         <div v-if="link.type === 'Веб-сайт'">
