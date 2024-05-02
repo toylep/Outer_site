@@ -1,7 +1,10 @@
 <template>
     <div>
-        <div v-if="practiceStorage.practices.length === 0" style="background-color: crimson;">
+        <div v-if="practiceStorage.is_empty == true" style="background-color: rgb(20, 220, 200);">
             <h2>Пока тут ничего нет</h2>
+        </div>
+        <div v-if="practiceStorage.has_error == true" style="background-color: crimson;">
+            <h2>Произошла ошибка</h2>
         </div>
         <div v-for="practice in  practiceStorage.practices">
             <div class="card" style="margin-top: 2rem">
