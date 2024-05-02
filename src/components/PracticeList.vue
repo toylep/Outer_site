@@ -1,10 +1,10 @@
 <template>
     <div>
         <div v-if="practiceStorage.practices.length === 0" style="background-color: crimson;">
-            <h2>Ошибка - не указан институт, перейдите на главную страницу и нажмите на нужный институт</h2>
+            <h2>Пока тут ничего нет</h2>
         </div>
         <div v-for="practice in  practiceStorage.practices">
-            <div class="card">
+            <div class="card" style="margin-top: 2rem">
                 <div class="card-header">
                     <h5 class="card-title">{{ practice.company.name }}</h5>
                 </div>
@@ -37,21 +37,11 @@ import { usePracticeStorage } from '@/storages/PracticeStorage'
 import { onBeforeMount } from 'vue';
 
 
-const practiceStorage = ref(usePracticeStorage())
-// const partnerHolder = {
-//     image: '',
-//     fullname: '',
-//     name: '',
-//     link: '',
-//     description: '',
-//     agreement: '',
-
-// }
-
+const practiceStorage = usePracticeStorage()
 
 onBeforeMount(() => {
-    console.log("получаем практики")
-    practiceStorage.value.getPracticeFromServer()
-    console.log(practiceStorage.value.getPracticeFromServer())
+    // console.log("получаем практики")
+    practiceStorage.getPracticeFromServer()
+    // console.log(practiceStorage.value.getPracticeFromServer())
 })
 </script>
