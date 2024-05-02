@@ -7,7 +7,7 @@
         <div class="name">
 
             Производственные партнеры <br>
-            ИРНИТУ
+            институтов ИРНИТУ
 
         </div>
         <div class="icons">
@@ -37,7 +37,7 @@ const user = {
     name: 'Не авторизован',
     email: 'Не авторизован',
     is_staff: false,
-    balance: 0,
+
 }
 const auth = {
     username: 'Не авторизован',
