@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-6">
                     <h2 style="width: fit-content;" >
-                        Промышленные партнеры иститута "{{ current_institute.name }}"
+                        Промышленные партнеры института "{{ current_institute.name }}"
                     </h2>
                     <hr>
                     <h2>Направления:</h2>
