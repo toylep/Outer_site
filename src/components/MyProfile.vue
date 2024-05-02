@@ -11,10 +11,8 @@
             <hr>
             <h3 class="card-title">Темы заданий на практику: {{ userStorage.partner.practice_topics }}</h3>
             <hr>
-            
             <h3 class="card-title">Сфера деятельности: {{  }}</h3>
             <hr>
-            
             <h3 class="card-title">Контактное лицо: {{  }}</h3>
             <hr>
         </div>
@@ -39,7 +37,7 @@ const changeUser = async () => {
         .then(res => userStorage.value.setUserFromServer())
 }
 const on_change_click = () => {
-    change_button.value *= -1
+    change_button.value = !change_button.value
 }
 const userHolder = {
     image: '',
@@ -56,4 +54,4 @@ onBeforeMount(() => {
         userStorage.value.setAuth(JSON.parse(localStorage.getItem('auth')))
     }
 })
-</script>@/storages/UserStorage
+</script>

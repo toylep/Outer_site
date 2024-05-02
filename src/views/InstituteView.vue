@@ -17,9 +17,4 @@ import { onBeforeMount, onMounted } from 'vue';
 import IntitituteTest from '@/components/Institute.vue';
 
 
-onBeforeMount(() => {
-    console.log("страничка грузится")
-
-
-})
 </script>
