@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
             <div class="row">
-                <div class="col-6">
+                <div class="col-8">
                     <h2 style="width: fit-content;" >
                         Промышленные партнеры иститута "{{ current_institute.name }}"
                     </h2>
@@ -12,8 +12,8 @@
                         <li v-for="speciality in current_institute.specialities">{{ speciality }}</li>
                     </ul>
                 </div>
-                <div class="col">
-                    <img :src="current_institute.picture" class="card-img-top" style="width: 70%" alt="тут должна быть картинка">
+                <div class="col-4">
+                    <img :src="current_institute.picture" style="height: 20rem;width: 20rem;" alt="тут должна быть картинка">
                 </div>
             </div>
 
