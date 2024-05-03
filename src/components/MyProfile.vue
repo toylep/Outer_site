@@ -1,20 +1,26 @@
 <template>
-    
+
     <div class="card" style="text-align: center;">
         <h1 style="text-align: center;">Профиль</h1>
         <div class="card-body">
-            <h3 class="card-title">{{ userStorage.partner.image }}</h3>
+            <h3 class="card-title"> Логин: {{ userStorage.user.username }}</h3>
             <hr>
-            <h3 class="card-title">Название компании: {{ userStorage.partner.username }}</h3>
+            <h3 class="card-title">почта: {{  userStorage.user.email }}</h3>
             <hr>
-            <h3 class="card-title">Договор: {{ userStorage.partner.agreement }}</h3>
+            <h3 class="card-title">Имя: {{ userStorage.user.first_name }}</h3>
             <hr>
-            <h3 class="card-title">Темы заданий на практику: {{ userStorage.partner.practice_topics }}</h3>
-            <hr>
-            <h3 class="card-title">Сфера деятельности: {{  }}</h3>
-            <hr>
-            <h3 class="card-title">Контактное лицо: {{  }}</h3>
-            <hr>
+            <h3 class="card-title">Фамилия: {{  userStorage.user.last_name}}</h3>
+        </div>
+        <RouterLink :to="{ name: 'auth' }">
+        <button class="btn btn-secondary" type="button" @click="logOut" >
+            Выйти
+        </button></RouterLink>
+        <div v-if="userStorage.user.is_superuser = true">
+            <RouterLink :to="{ name: 'update' }">
+            <button class="btn btn-primary" type="button">
+                добавить партнера
+            </button></RouterLink>
+
         </div>
     </div>
 
@@ -46,6 +52,10 @@ const userHolder = {
     practice_topics: ''
 
 
+}
+const logOut = () => {
+    localStorage.removeItem('user')
+    localStorage.removeItem('auth')
 }
 
 onBeforeMount(() => {

@@ -15,6 +15,7 @@ export const useInstStorage = defineStore("instituteStore", {
           this.Insts = response.data;
         });
     },
+    
     getInstsById(id) {
       // console.log("получаем институты")
      this.current_institute = this.Insts.filter((el)=>el.id == id)[0]

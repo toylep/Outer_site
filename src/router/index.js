@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import InstituteView from '@/views/InstituteView.vue';
 import PracticeView from '@/views/PracticeView.vue';
 import UserView from '@/views/UserView'
+import AuthView from '@/views/AuthView.vue'
+import UpdateView from '@/views/UpdateView.vue'
 const routes = [
   { 
     
@@ -14,8 +16,19 @@ const routes = [
     component: PracticeView
   },
   {
-    path: '/in',
-    name: 'in'
+    path: '/out/auth',
+    name: 'auth',
+    component: UserView
+  },
+  {
+    path: '/out/user',
+    name: 'user',
+    component: AuthView
+  },
+  {
+    path: '/out/update',
+    name: 'update',
+    component: UpdateView
   }
  
 ]

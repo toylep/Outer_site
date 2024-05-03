@@ -1,0 +1,66 @@
+<template>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                    Добавление партнера
+                </h5>
+
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Введите название компании</label>
+                    <input class="form-control" placeholder="Название" v-model="partnerHolder.name" />
+                </div>
+                <div class="form-group">
+                    <label>Введите ссылку на картинку</label>
+                    <input class="form-control" placeholder="логотип" v-model="partnerHolder.image" />
+                </div>
+                <div class="form-group">
+                    <label>Введите договор</label>
+                    <input class="form-control" placeholder="договор" v-model="partnerHolder.agreements" />
+                </div>
+                <button class="btn btn-primary" type="button" @click="addPartner">
+                    Добавить
+                </button>
+            </div>
+        </div>
+    </div>
+
+</template>
+<script setup>
+import { useUserStorage } from '@/storages/UserStorage';
+import { usePracticeStorage } from '@/storages/PracticeStorage'
+import { ref } from 'vue';
+import axios from 'axios'
+const userStorage = ref(useUserStorage())
+
+const partnerHolder = {
+    name: '',
+    dbegin: null,
+    dend: null,
+    image: '',
+    agreements: ''
+}
+const addPartner = async () => {
+    try {
+
+        await axios.post('/api/out/legacy/company/add/', partnerHolder,
+            {
+                auth: {
+                    username: userStorage.value.auth.username,
+                    password: userStorage.value.auth.password,
+                },
+                headers: {
+                    "Content-Type": "multipart/form-data"
+                },
+            })
+            .then(res => res.data)
+    } catch (err) {
+        alert('У вас нет прав админа')
+        console.log(err)
+    }
+
+}
+
+</script>

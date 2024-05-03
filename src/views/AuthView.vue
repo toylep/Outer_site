@@ -5,7 +5,7 @@
 
                 <div class="col-sm p-3 min-vh-100">
                     <div class="container">
-                    <LoginWindow></LoginWindow>
+                    <MyProfile></MyProfile>
 
                     </div>
                 </div>
@@ -15,6 +15,6 @@
     
 </template>
 <script setup>
-import LoginWindow from '@/components/LoginWindow.vue'
+import MyProfile from '@/components/MyProfile.vue'
 
 </script>

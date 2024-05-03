@@ -6,6 +6,7 @@
         <div v-if="practiceStorage.has_error == true" style="background-color: crimson;">
             <h2>Произошла ошибка</h2>
         </div>
+        
         <div v-for="practice in  practiceStorage.practices">
             <div class="card" style="margin-top: 2rem">
                 <div class="card-header">
@@ -38,6 +39,7 @@
 </template>
 <script setup>
 import { ref } from 'vue';
+import { useUserStorage } from '@/storages/UserStorage';
 import { usePracticeStorage } from '@/storages/PracticeStorage'
 import { onBeforeMount } from 'vue';
 
