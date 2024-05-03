@@ -31,36 +31,35 @@
 <script setup>
 import { useUserStorage } from '@/storages/UserStorage';
 import { usePracticeStorage } from '@/storages/PracticeStorage'
-import { ref } from 'vue';
+import { ref,onBeforeMount } from 'vue';
 import axios from 'axios'
 const userStorage = ref(useUserStorage())
 
 const partnerHolder = {
     name: '',
-    dbegin: null,
-    dend: null,
+    dbegin: '',
+    dend: '',
     image: '',
     agreements: ''
 }
 const addPartner = async () => {
     try {
-
-        await axios.post('/api/out/legacy/company/add/', partnerHolder,
+        await axios.post('/api/out/legacy/company/add', partnerHolder,
             {
-                auth: {
-                    username: userStorage.value.auth.username,
-                    password: userStorage.value.auth.password,
-                },
-                headers: {
-                    "Content-Type": "multipart/form-data"
-                },
+                auth: userStorage.value.auth,
             })
             .then(res => res.data)
+            .then(data=>console.log(data))
+            .then(res => alert("Партнер добавлен"))
+            
     } catch (err) {
         alert('У вас нет прав админа')
+        console.log(userStorage.value.auth)
         console.log(err)
     }
 
 }
-
+onBeforeMount(() => {
+    userStorage.value.authUser()
+})
 </script>
